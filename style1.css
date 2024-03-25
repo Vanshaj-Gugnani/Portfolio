@@ -1,0 +1,276 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.nav1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #385170; */
+    height: 80px;
+}
+nav div ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+nav ul li{
+    position: relative;
+    margin-right: 35px;
+    border: 2px solid rgb(44, 44, 44);
+    padding: 10px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+nav ul li::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+}
+
+nav ul li:hover::after{
+    top: 0;
+    border-radius: 0;
+}
+
+/* how to create nav bar button aimation 
+1. first create a box after the li element just below input
+2. transition it to come at top using top and left property by making the position absolute
+3. make sure you make the parent relative so that the child follow the relative position  */
+
+body{
+    /* background-color: #142d4c; */
+    /* background-color: #fffdf6; */
+    background-color: #faf6e9;
+    color: #ececec;
+    font-family: Poppins, sans-serif;
+    user-select: none;
+}
+nav ul li a{
+    font-weight: 100;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.749);
+    position: relative;
+    z-index: 9;
+    /* transition: all 1s ease; */
+}
+
+nav ul li:hover a{
+    color: #ffffff;
+}
+.nav-left{
+    font-size: 1.5em;
+    color: #494949;
+    font-weight: 700;
+    margin-left: 10vw;
+}
+
+
+
+.section-1{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin: 120px 0px;
+    margin-bottom: 170px;
+}
+.left-section{
+    position :relative;
+    z-index: 9;
+    font-size: 2.7rem;
+    margin: 40px 160px;
+    color: #494949;
+    font-weight: 700;
+}
+
+.left-section::after{
+    content:'';
+    position:absolute ;
+    z-index: -999;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    top :0;
+    left: 0;
+    background-color: #ffc97c;
+    filter:blur(20px);
+    animation-name: orange-ball3;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.blur-cir{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #ffc97c;
+    filter:blur(20px);
+    z-index: -999;
+    top: -50%;
+    animation-name: orange-ball;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.cir2{
+    left: -30%;
+    animation-name: orange-ball2;
+}
+
+.section-1 > div{
+    width: 35%;
+    /* background-color: red; */
+}
+
+section div img {
+    width: 50%;
+    margin: 0px 100px;
+}
+
+.purple{
+    color: rgb(241, 162, 65) ;
+    /* color: rgb(116, 87, 198) ; */
+}
+
+#element{
+    color: rgb(241, 162, 65);
+}
+
+main hr{
+    border: 0;
+    height: 0.7px;
+    margin: 0px 80px;
+    background: #494949;
+}
+
+.side-scroll{
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.side-scroll::-webkit-scrollbar{
+    display: none;
+}
+
+
+.elements{
+    color: #000;
+    margin:  10vh 0;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 18vh;
+    animation-name: text-x-scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* user-select: none; */
+} 
+.ele{
+    /* background-color: #ffc97c; */
+    display: inline-block;
+    
+}
+.gola{
+    
+    margin: 0 30px;
+    display: inline-block;
+}
+
+.gola1{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: orangered;
+    position: relative;
+    filter:blur(4px);
+    animation-name: rotateCircle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.gola1::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: orangered;
+    top: -15%;
+    left: -15%;
+    filter:blur(4px);
+
+    animation-name: rotateCircle2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+}
+
+
+
+
+@keyframes orange-ball {
+    from{
+        transform: translate(-5%,-5%);
+    }
+    to{
+        transform: translate(5%,5%);
+    }
+}
+@keyframes orange-ball2 {
+    from{
+        transform: translate(5%,5%);
+    }
+    to{
+        transform: translate(-5%,-5%);
+    }
+}
+@keyframes orange-ball3 {
+    from{
+        transform: translate(-5%,0%);
+    }
+    to{
+        transform: translate(-15%,0%);
+    }
+}
+@keyframes text-x-scroll{
+    from{
+        transform: translateX(0%)
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes rotateCircle {
+    from {
+      transform: translateX(-10%)
+    }
+    to {
+     
+      transform: translateX(10%) 
+    }
+  }
+@keyframes rotateCircle2 {
+    from {
+      transform: translateY(-10%)
+    }
+    to {
+      transform: translateY(10%) 
+    }
+  }
