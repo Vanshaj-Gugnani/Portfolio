@@ -231,39 +231,45 @@ main hr{
     gap: 10%;
     flex-wrap: wrap;
     overflow: hidden;
+    background-color: black;
 }
 .skills{
     position: absolute;
-    top: 25%;
+    top: 57%;
     left: 30%;
     font-weight: 700;
     font-size: 200px;
     color: black;
 }
+.skills2{
+    /* display: none; */
+    top : -43%;
+}
+
 .page3 img{
     position: relative;
     height: 25%;
     width: 25%;
-    
+    z-index: 10;
 }
 .img1{
     top: 7%;
     left: 7%;
 }
-.img8{
-    left: 5%;
-}
-.img5{
-    left: -5%;
-} 
 .img4{
     top: 7%;
     left: -7%;
+} 
+.img5{
+    left: -5%;
 } 
 .img6{
     top: 32%;
     left: 35%;
 } 
+.img8{
+    left: 5%;
+}
 .img9{
     top: -3%;
     left: 8%;
@@ -273,6 +279,27 @@ main hr{
     left: 5%;
 } 
 
+.subpage1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #FAF6E9;
+    z-index: 9;
+    overflow: hidden;
+}
+.subpage2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #FAF6E9;
+    z-index: 9;
+    overflow: hidden;
+}
 
 @keyframes orange-ball {
     from{
